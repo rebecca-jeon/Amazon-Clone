@@ -86,3 +86,43 @@
         </ul>
     </li>
 </ul>
+
+<h4>October 30th</h4>
+
+<ul>
+    <li>
+        Data Layer
+        <ul>
+            <li>
+                Created StateProvider.js 
+                <ul>
+                    <li>Imported 'CreateContext', 'useContext', 'useReducer' from "react"</li>
+                    <li>'CreateContext' prepared and created a data layer</li>
+                    <li>Wrapped the app with the data layer by using 'useReducer'</li>
+                    <li>'useContext' to pull data from the data layer </li>
+                </ul>
+            </li>
+            <li>
+                Created reducer.js
+                <ul>
+                    <li>Stated the initial state of data layer with an array named a basket for the checkout page </li>
+                    <li>Created functions to either pull or push items into the basket; data layer </li>
+                    <li>Reducer: It takes the state so far and the action, and return the next state. In this way, they accumulate actions over time and update the data.</li>
+                </ul>
+            </li>
+            <li>`const [{basket}, dispatch] = useStateValue();`
+                <ul>
+                    <li>This code enables you to pull information from the basket in any files of the project</li>
+                    <li>The export function, useStateValue, from StateProvider.js using useContext function</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        `{basket?.length}`
+            <ul>
+                <li>We can find out how many items are in the basket; data layer by simple performing `basket.length`</li>
+                <li>Having ? before `.length` would help it to return just null or 0 when an error occurs. It helps to retain the page's composure even when there is a problem or an error </li>
+            </ul>
+    </li>
+</ul>

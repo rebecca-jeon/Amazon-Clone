@@ -126,3 +126,49 @@
             </ul>
     </li>
 </ul>
+
+<h4>November 7th</h4>
+
+<ul>
+    <li>
+        Form Input Type
+        <ul>
+            <li>If you set form's input type = "password", it sets the user's input in the form to look like *** to provide privacy for the users when typing out their password.</li>
+        </ul>
+    </li>
+    <li>
+        Firebase
+        <ul>
+            <li>Firebase is a platform developed by Google that provides a suite of tools for building, managing, and scaling web and mobile applications. It's particularly popular for real-time databases, authentication, and analytics, making it easier for developers to focus on building features rather than backend infrastructure.</li>
+            <li>Globally Installing Firebase Tools Command-line Tool</li>
+            <ul>
+                >     sudo npm i -g firebase-tools
+            </ul>
+            <li>Installing Firebase locally with npm </li>
+            <ul>
+                >     npm i firebase
+            </ul>
+            <li>Utilized Authentication and Firestore for application's authentication processes and using real-time and scalablen databases </li>
+            <li>Imported 'createUserWithEmailAndPassword' and 'signInWithEmailAndPassword' from 'firebase/auth'</li>
+            >     signInWithEmailAndPassword(auth, email, password)
+            >        .then ((userCredential) => {
+            >            navigate('/');
+            >        })
+            >        .catch((error) => {
+            >            alert(error.message);
+            >     })
+            <li>Deployed the application through firebase: 'firebase deploy'</li>
+        </ul>
+    </li>
+    <li>
+        useState('');
+        <ul>
+            <li>useState allows functional components to store and update values, making it easier to handle data that changes over time within a component</li>
+            <li>useState is a hook. In React, a hook is a special function that lets you "hook into" React’s core features (like state and lifecycle methods) within functional components.</li>
+            >     const [email, setEmail] = useState('');
+            >     <input type='text' value = {email} onChange={e => setEmail(e.target.value)}/>
+            <li>The onChange event handler listens for changes to the input field. Every time the user types, this function is called.</li>
+            <li>setEmail(e.target.value) updates the email state with this new value.></li>
+        </ul>
+    </li>
+</ul>

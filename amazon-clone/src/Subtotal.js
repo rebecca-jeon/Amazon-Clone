@@ -3,8 +3,15 @@ import "./Subtotal.css";
 import CurrencyFormat from "react-currency-format";
 import {useStateValue} from "./StateProvider";
 import { getBasketTotal } from "./reducer";
+import { useNavigate } from  'react-router-dom';
 
+//version6 of react-router-dom removed 'useHistory' and replaced it with 'useNavigate'
+
+//navigate is good for when you need to push the user somewhere
+//allows to keep styling of the button while redirect.
+//If use Link, it will look like a link
 function Subtotal() {
+  const navigate = useNavigate();
   const [{basket}, dispatch] = useStateValue();
 
   return (
@@ -27,7 +34,7 @@ function Subtotal() {
         )}
       />
 
-      <button>Proceed to Checkout</button>
+      <button onClick={e => navigate('/payment')}>Proceed to Checkout</button>
     </div>
   );
 }
